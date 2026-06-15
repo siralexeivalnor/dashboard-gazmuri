@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuestas de la Oposición | Dip. Ana María Gazmuri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background-color: #f3e8ff; /* Lila suave de fondo */
+        }
+        
+        .header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .opposition {
+            border-left: 6px solid #7C3AED;
+        }
+        
+        .government {
+            border-left: 6px solid #f59e0b;
+        }
+        
+        .eje-badge {
+            background: linear-gradient(90deg, #7C3AED, #a855f7);
+            color: white;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header border-b border-violet-100">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            
+            <!-- LOGO -->
+            <div class="flex items-center gap-x-3">
+                <img src="logo-gazmuri.png" alt="Logo Ana María Gazmuri" class="h-12 w-auto">
+                <div>
+                    <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Propuestas de la Oposición</h1>
+                    <p class="text-slate-600 text-sm -mt-0.5">Frente a la Mega Reforma Tributaria</p>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <div class="text-sm font-semibold text-[#7C3AED]">Ana María Gazmuri</div>
+                <div class="text-xs text-orange-600">Diputada Distrito 12</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        
+        <!-- Título -->
+        <div class="flex items-end justify-between mb-6">
+            <div>
+                <h2 class="text-2xl font-semibold text-slate-800">Comparación de Propuestas</h2>
+                <p class="text-slate-600 text-sm">Oposición vs Gobierno</p>
+            </div>
+            <div class="flex items-center gap-x-2 text-sm text-slate-500 bg-white px-4 h-9 rounded-2xl border border-violet-100">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>11 ejes temáticos</span>
+            </div>
+        </div>
+
+        <!-- Tarjetas -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="cardsContainer">
+            <!-- Se genera con JavaScript -->
+        </div>
+
+    </div>
+
+    <script>
+        const data = [
+            {
+                eje: "Crecimiento e inversión productiva",
+                medida: "Agenda de desarrollo productivo: I+D, economía digital y minerales críticos",
+                gobierno: "El megaproyecto no incluye agenda de innovación, I+D ni diversificación productiva. El crédito a la planilla concentra beneficios en grandes empresas.",
+                oposicion: "El crecimiento sostenible depende de aumentar inversión, productividad e innovación. Chile tiene USD 75.000 MM en proyectos; el cuello de botella son permisos y financiamiento, no impuestos."
+            },
+            {
+                eje: "Empleo",
+                medida: "Fortalecer y ampliar el Subsidio Unificado al Empleo (SUE)",
+                gobierno: "Crédito tributario a la planilla salarial (USD 1.500 MM/año). El ministro Quiroz admitió que no genera empleo adicional.",
+                oposicion: "El SUE crea empleo nuevo, llega directamente al trabajador y cuesta menos del 20% del crédito tributario del gobierno."
+            },
+            {
+                eje: "Capacitación laboral",
+                medida: "Reformar la Franquicia Tributaria (FT) y crear la Agencia Nacional de Empleo",
+                gobierno: "Eliminar la franquicia tributaria de capacitación (en contexto de recorte de 45% al presupuesto de SENCE).",
+                oposicion: "La franquicia representa 2/3 de la inversión estatal en capacitación. Eliminarla desprotege a trabajadores en plena transición digital y energética."
+            },
+            {
+                eje: "Cuidados y empleabilidad femenina",
+                medida: "Sala cuna universal",
+                gobierno: "No incluida en la Mega Reforma.",
+                oposicion: "Eleva la participación laboral femenina, reduce brecha salarial y activa la economía con impacto directo en equidad de género."
+            },
+            {
+                eje: "Endeudamiento y costo de la vida",
+                medida: "Chao DICOM, devolución del IVA de la canasta básica y detener cobros del CAE",
+                gobierno: "No incluidas medidas de alivio al endeudamiento ni reducción del costo de la vida.",
+                oposicion: "El sobreendeudamiento frena el consumo. La devolución del IVA es progresiva, de bajo costo administrativo y llega directo al bolsillo."
+            },
+            {
+                eje: "Vivienda",
+                medida: "Subsidios focalizados a la tasa de interés y al pie para compra de viviendas",
+                gobierno: "Exención de IVA por 12 meses sin límite + régimen DFL 2.0 + exención de contribuciones a mayores de 65 sin focalización.",
+                oposicion: "La exención de IVA reduce el precio solo 4-5% y beneficia principalmente a inmobiliarias. Favorece arriendo sobre propiedad."
+            },
+            {
+                eje: "Inversión y permisos",
+                medida: "Implementar los reglamentos de la Ley Marco de Autorizaciones Sectoriales",
+                gobierno: "Seis medidas de reforma ambiental y de permisos, pero el reglamento de la Ley Marco aún no se ha implementado.",
+                oposicion: "Reducir en un tercio el tiempo de tramitación equivale a bajar el IDPC en 3,7 puntos (Comisión Marfán). No tiene costo fiscal."
+            },
+            {
+                eje: "Pymes",
+                medida: "FOGAPE simplificado + Pago en 30 días",
+                gobierno: "El crédito a la planilla concentra 1/2 del beneficio en grandes empresas. Las Mipymes no pueden aprovecharlo.",
+                oposicion: "Las Pymes generan la mayor parte del empleo y son las más expuestas a la informalidad. Agenda focalizada tiene mayor impacto real."
+            },
+            {
+                eje: "Evasión y elusión",
+                medida: "Fortalecer el SII y Aduanas + Levantamiento acotado del secreto bancario",
+                gobierno: "Ninguna de las 13 medidas tributarias apunta a combatir evasión y elusión.",
+                oposicion: "El cierre de la brecha tributaria es la fuente de recaudación más progresiva y menos costosa. Solo hay que cobrar lo que ya está acordado."
+            },
+            {
+                eje: "Responsabilidad fiscal",
+                medida: "Sistema tributario desintegrado + Mesa técnica de alto nivel",
+                gobierno: "Rebaja IDPC del 27% al 23%, reintegración plena, crédito a la planilla, invariabilidad tributaria 25 años.",
+                oposicion: "El impacto fiscal favorable aparece recién en 2035. La invariabilidad por 25 años congela la política fiscal por 6 gobiernos."
+            },
+            {
+                eje: "Municipios y territorios",
+                medida: "Fortalecer el Fondo Común Municipal + Nueva ley de rentas municipales",
+                gobierno: "Exención universal de contribuciones a mayores de 65 años + cambios a la Ordenanza de Urbanismo sin acuerdo con municipios.",
+                oposicion: "Los municipios son el primer piso del Estado. La exención universal quita recursos al FCM y daña especialmente a las comunas más vulnerables."
+            }
+        ];
+
+        function renderCards() {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+
+            data.forEach(item => {
+                const cardHTML = `
+                    <div class="card border border-violet-100 rounded-3xl p-6 shadow-sm">
+                        <div class="mb-4">
+                            <span class="eje-badge inline-block px-4 py-1 rounded-2xl">${item.eje}</span>
+                        </div>
+                        
+                        <h3 class="font-semibold text-xl text-slate-900 mb-5 leading-snug">${item.medida}</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Gobierno -->
+                            <div class="government border border-amber-200 rounded-2xl p-4">
+                                <div class="flex items-center gap-x-2 mb-2">
+                                    <i class="fa-solid fa-times-circle text-amber-600"></i>
+                                    <span class="font-bold text-amber-700 text-sm">GOBIERNO PROPONE</span>
+                                </div>
+                                <p class="text-sm text-amber-900 leading-relaxed">${item.gobierno}</p>
+                            </div>
+                            
+                            <!-- Oposición -->
+                            <div class="opposition border border-violet-200 rounded-2xl p-4">
+                                <div class="flex items-center gap-x-2 mb-2">
+                                    <i class="fa-solid fa-check-circle text-violet-600"></i>
+                                    <span class="font-bold text-violet-700 text-sm">NUESTRA PROPUESTA</span>
+                                </div>
+                                <p class="text-sm text-violet-900 leading-relaxed">${item.oposicion}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+
+        window.onload = function() {
+            renderCards();
+        }
+    </script>
+</body>
+</html>
